@@ -1,11 +1,10 @@
 # kiwi_solution
 Nginx container with simple site. Serves as solution to entry task for the Kiwi.com Weekend in the Cloud.
 
-# Using the container
-Use Docker itself:
+# Running
+Using Docker:
 
-  `docker run --detach --rm=true --volumes ./wwwroot/:/var/www/ --name=nginx --hostname=nginx nginx-simple`
-
-Or use Docker-compose:
-
-  `docker-compose up -d`
+  `docker build -t kiwi_solution .`
+  
+  `docker run -itd --name mycontainer --publish 8080:80 kiwi_solution`
+  
